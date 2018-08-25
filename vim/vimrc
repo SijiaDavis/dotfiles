@@ -1,0 +1,30 @@
+set nocompatible " We’re running Vim, not Vi!
+execute pathogen#infect()
+" yank from clipboard
+set clipboard=unnamed
+syntax on
+color dracula
+set incsearch
+set ignorecase
+set hlsearch
+" Make vim indent 2 spaces for ruby and scala files only
+filetype plugin indent on
+set sw=4
+set ts=4
+:autocmd Filetype ruby set softtabstop=2
+:autocmd Filetype ruby set sw=2
+:autocmd Filetype ruby set ts=2
+
+" the basics
+syntax on " Enable syntax highlighting
+filetype on " Enable filetype detection
+filetype indent on " Enable filetype-specific indenting
+filetype plugin on " Enable filetype-specific plugins
+" Set line numbering, shift width
+set number
+set tabstop=2
+set expandtab
+set shiftwidth=2
+set cursorline
+" map ;; to Esc
+:imap ;; <Esc>

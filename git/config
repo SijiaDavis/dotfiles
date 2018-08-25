@@ -1,0 +1,32 @@
+[color]
+	ui = true
+[push]
+	default = upstream
+[merge]
+	conflictstyle = diff3
+	ff = only
+[core]
+	editor = atom --wait
+	autocrlf = input
+	excludesfile = ~/.gitignore
+[user]
+	name = SijiaDavis
+	email = arwen@ksu.edu
+[rerere]
+	enabled = true
+[alias]
+	s = status -s
+	lg = log --oneline --decorate --all --graph
+	stash = stash -u
+	ca = commit --amend --no-edit
+	uncommit = reset --soft HEAD^
+	co = checkout
+	aa = add --all
+	b = branch
+	br = browse
+[pull]
+	rebase = true
+[fetch]
+  prune = true
+[url "https://"]
+	insteadOf = git://

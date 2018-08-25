@@ -1,0 +1,59 @@
+" the basics
+set nocompatible " We’re running Vim, not Vi!
+set hidden
+set scrolloff=5
+set sidescrolloff=3
+syntax on " Enable syntax highlighting
+filetype on " Enable filetype detection
+filetype indent on " Enable filetype-specific indenting
+filetype plugin on " Enable filetype-specific plugins
+" Set line numbering, shift width
+set number
+set tabstop=2
+set expandtab
+set shiftwidth=2
+set cursorline
+" incrememtal search
+set incsearch
+" ignore case when search
+set ignorecase
+" highlight search result after the serach is closed.
+set hlsearch
+" enable surround plugin (change pairs of parenthesis, quotation marks, etc)
+set surround
+" copy to clipboard
+set clipboard+=unnamedplus
+" map ;; to Esc in insert mode and visual mode
+:imap ;; <Esc>
+:vmap ;; <Esc>
+
+" set leader key
+let mapleader=","
+
+" go to declaration
+nmap <leader>g :action GotoDeclaration<cr>
+" run test
+nmap <leader>t :action Run<cr>
+" copy the whole file.
+nmap <leader>c ggVGy
+" add binding.pry in normal mode:
+nnoremap <leader>b obinding.pry<esc>
+
+" when press 0, go to the beginning of line when first word appears, not
+" including the space and tabs.
+nmap 0 ^
+" enter gives a new line when in command mode without entering insert mode.
+nmap <CR> o<Esc>
+" jump out of closing parenthesis/brackets/quotation marks in insert mode
+inoremap <C-e> <C-o>A
+" set x not go into the default registry.
+nnoremap x "_x 
+
+" Make vim indent 2 spaces for ruby and scala files only
+filetype plugin indent on
+set sw=4
+set ts=4
+:autocmd Filetype ruby set softtabstop=2
+:autocmd Filetype ruby set sw=2
+:autocmd Filetype ruby set ts=2
+
