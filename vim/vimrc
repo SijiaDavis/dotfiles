@@ -1,9 +1,6 @@
 set nocompatible " We’re running Vim, not Vi!
 execute pathogen#infect()
 
-" yank from clipboard
-set clipboard=unnamed
-
 syntax on " Enable syntax highlighting
 color dracula
 set incsearch " incremental search
@@ -27,6 +24,29 @@ set number
 set expandtab
 set shiftwidth=2
 set cursorline
+set hidden
+
+" yank from clipboard
+set clipboard+=unnamedplus
 
 " map ;; to Esc
 :imap ;; <Esc>
+:vmap ;; <Esc>
+
+" set leader key
+let mapleader=","
+
+" copy the entire file
+nmap <leader>c ggVGy
+" add binding.pry in normal mode
+nnoremap <leader>b obinding.pry<esc>
+
+" when pressing 0, go to the the first text in the line
+nmap 0 ^
+" enter gives a new line when in command mode without entering insert mode
+nmap <CR> o<Esc>
+" Ctrl + e to jump out of closing parenthese/brackets/quotation marks in
+" insert mode
+inoremap <C-e> <C-o>A
+" set x not go into the default registry
+nnoremap x "_x
