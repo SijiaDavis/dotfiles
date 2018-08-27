@@ -38,6 +38,8 @@ nmap <leader>t :action Run<cr>
 nmap <leader>c ggVGy
 " add binding.pry in normal mode:
 nnoremap <leader>b obinding.pry<esc>
+" source the ideavimrc file
+nmap <leader>z :source ~/.ideavimrc<cr>
 
 " when press 0, go to the beginning of line when first word appears, not
 " including the space and tabs.
@@ -46,5 +48,5 @@ nmap 0 ^
 nmap <CR> o<Esc>
 " jump out of closing parenthesis/brackets/quotation marks in insert mode
 inoremap <C-e> <C-o>A
-" set x not go into the default registry.
+" set x not go into the default registry (put it in the 'blackhole' register)
 nnoremap x "_x 
