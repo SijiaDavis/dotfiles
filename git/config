@@ -24,6 +24,7 @@
 	aa = add --all
 	b = branch
 	br = browse
+    unstage = reset HEAD --
 [pull]
 	rebase = true
 [fetch]
