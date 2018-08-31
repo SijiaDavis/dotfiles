@@ -3,6 +3,8 @@ set nocompatible " We’re running Vim, not Vi!
 set hidden
 set scrolloff=5
 set sidescrolloff=3
+set bg=dark
+set showcmd
 syntax on " Enable syntax highlighting
 filetype on " Enable filetype detection
 filetype indent on " Enable filetype-specific indenting
@@ -34,6 +36,8 @@ let mapleader=","
 nmap <leader>g :action GotoDeclaration<cr>
 " run test
 nmap <leader>t :action Run<cr>
+" run all test in the class
+nmap <leader>a :action RunClass<cr>
 " copy the whole file.
 nmap <leader>c ggVGy
 " add binding.pry in normal mode:

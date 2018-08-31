@@ -6,6 +6,8 @@ color dracula
 set incsearch " incremental search
 set ignorecase " case insensitive
 set hlsearch " highlight search result
+set bg=dark
+set showcmd
 
 " Make vim indent 2 spaces for ruby files only
 filetype plugin indent on
@@ -50,3 +52,6 @@ nmap <CR> o<Esc>
 inoremap <C-e> <C-o>A
 " set x not go into the default registry
 nnoremap x "_x
+
+" automatically rebalance wiindows on vim resize
+autocmd VimResized * :wincmd =
