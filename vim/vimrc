@@ -23,6 +23,7 @@ filetype plugin on " Enable filetype-specific plugins
 
 " Set line numbering, shift width
 set number
+set relativenumber
 set expandtab
 set shiftwidth=2
 set cursorline

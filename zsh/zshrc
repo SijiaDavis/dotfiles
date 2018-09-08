@@ -94,6 +94,11 @@ alias zshrc="vim ~/.zshrc"
 . /usr/local/etc/profile.d/z.sh
 
 source $HOME/.zshenv
+mkcdir ()
+{
+    mkdir -p -- "$1" &&
+      cd -P -- "$1"
+}
 
 fpath=(~/.zsh/completion $fpath)
 
