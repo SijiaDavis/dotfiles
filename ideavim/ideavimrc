@@ -12,12 +12,7 @@ filetype plugin on " Enable filetype-specific plugins
 " Set line numbering, shift width
 set number relativenumber
 
-augroup numbertoggle
-  autocmd!
-  autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
-  autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
-augroup END
-
+set showmode
 set tabstop=2
 set expandtab
 set shiftwidth=2
@@ -39,25 +34,65 @@ set clipboard+=unnamedplus
 " set leader key
 let mapleader=","
 
+" toggle absolute line number
+nmap <leader>l :set relativenumber! number!<cr>
 " go to declaration
 nmap <leader>g :action GotoDeclaration<cr>
-" run test
-nmap <leader>t :action Run<cr>
 " run all test in the class
-nmap <leader>a :action RunClass<cr>
+nmap <leader>t :action RunClass<cr>
 " copy the whole file.
 nmap <leader>c ggVGy
 " add binding.pry in normal mode:
 nnoremap <leader>b obinding.pry<esc>
 " source the ideavimrc file
 nmap <leader>z :source ~/.ideavimrc<cr>
+" go to the position in the file tree
+noremap <leader>f :action SelectInProjectView<CR>
+" rename file
+noremap <leader>r :action RenameFile<CR>
+" auto indent entire file
+noremap <leader>a gg=G''
 
 " when press 0, go to the beginning of line when first word appears, not
 " including the space and tabs.
 nmap 0 ^
 " enter gives a new line when in command mode without entering insert mode.
-nmap <CR> o<Esc>
+nmap <CR> :action EditorEnter<CR>
 " jump out of closing parenthesis/brackets/quotation marks in insert mode
-inoremap <C-e> <C-o>A
+inoremap <C-e> <ESC>la
 " set x not go into the default registry (put it in the 'blackhole' register)
 nnoremap x "_x 
+noremap J :action EditorJoinLines<CR>
+
+" Normal
+nnoremap dd ddzz
+" Visual
+vnoremap d dzz
+
+" Normal + Visual
+noremap # #zz
+noremap * *zz
+noremap w wzz
+noremap W Wzz
+noremap e ezz
+noremap E Ezz
+noremap b bzz
+noremap B Bzz
+noremap H Hzz
+noremap L Lzz
+noremap 0 0zz
+noremap $ $zz
+noremap ^ ^zz
+noremap j jzz
+noremap k kzz
+noremap G Gzz
+noremap u uzz
+noremap ( (zz
+noremap ) )zz
+noremap { {zz
+noremap } }zz
+noremap [{ [{zz
+noremap ]} ]}zz
+noremap gd gdzz
+
+

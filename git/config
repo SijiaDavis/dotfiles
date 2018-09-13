@@ -21,7 +21,7 @@
 	ca = commit --amend --no-edit
 	uncommit = reset --soft HEAD^
 	co = checkout
-	aa = add --all
+	aa = add --p
 	b = branch
 	br = browse
     unstage = reset HEAD --
