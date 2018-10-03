@@ -41,7 +41,7 @@ nmap <leader>g :action GotoDeclaration<cr>
 " run all test in the class
 nmap <leader>t :action RunClass<cr>
 " copy the whole file.
-nmap <leader>c ggVGy
+noremap <leader>c ggVGy
 " add binding.pry in normal mode:
 nnoremap <leader>b obinding.pry<esc>
 " source the ideavimrc file
