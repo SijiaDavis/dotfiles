@@ -34,8 +34,8 @@ set clipboard+=unnamedplus
 " set leader key
 let mapleader=","
 
-" toggle absolute line number
-nmap <leader>l :set relativenumber! number!<cr>
+" reformat code
+nmap <leader>l :action ReformatCode<cr>
 " go to declaration
 nmap <leader>g :action GotoDeclaration<cr>
 " run all test in the class
@@ -55,7 +55,7 @@ noremap <leader>a gg=G''
 
 " when press 0, go to the beginning of line when first word appears, not
 " including the space and tabs.
-nmap 0 ^
+nnoremap 0 ^
 " enter gives a new line when in command mode without entering insert mode.
 nmap <CR> :action EditorEnter<CR>
 " jump out of closing parenthesis/brackets/quotation marks in insert mode
@@ -95,4 +95,8 @@ noremap [{ [{zz
 noremap ]} ]}zz
 noremap gd gdzz
 
-
+" mappings to move lines in normal mode and insert mode
+nnoremap <A-j> :m .+1<CR>==
+nnoremap <A-k> :m .-2<CR>==
+inoremap <A-j> <Esc>:m .+1<CR>==gi
+inoremap <A-k> <Esc>:m .-2<CR>==gi

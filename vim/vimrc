@@ -54,5 +54,11 @@ inoremap <C-e> <C-o>A
 " set x not go into the default registry
 nnoremap x "_x
 
+" mappings to move line in normal mode and insert mode
+nnoremap <A-j> :m .+1<CR>==
+nnoremap <A-k> :m .-2<CR>==
+inoremap <A-j> <Esc>:m .+1<CR>==gi
+inoremap <A-k> <Esc>:m .-2<CR>==gi
+
 " automatically rebalance wiindows on vim resize
 autocmd VimResized * :wincmd =
