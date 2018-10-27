@@ -25,6 +25,8 @@ set ignorecase
 set hlsearch
 " enable surround plugin (change pairs of parenthesis, quotation marks, etc)
 set surround
+" enable multiple-cursors plugin
+set multiple-cursors
 " copy to clipboard
 set clipboard+=unnamedplus
 " map ;; to Esc in insert mode and visual mode
@@ -55,7 +57,7 @@ noremap <leader>a gg=G''
 
 " when press 0, go to the beginning of line when first word appears, not
 " including the space and tabs.
-nnoremap 0 ^
+map 0 ^
 " enter gives a new line when in command mode without entering insert mode.
 nmap <CR> :action EditorEnter<CR>
 " jump out of closing parenthesis/brackets/quotation marks in insert mode
@@ -63,11 +65,6 @@ inoremap <C-e> <ESC>la
 " set x not go into the default registry (put it in the 'blackhole' register)
 nnoremap x "_x 
 noremap J :action EditorJoinLines<CR>
-
-" Normal
-nnoremap dd ddzz
-" Visual
-vnoremap d dzz
 
 " Normal + Visual
 noremap # #zz
@@ -80,7 +77,6 @@ noremap b bzz
 noremap B Bzz
 noremap H Hzz
 noremap L Lzz
-noremap 0 0zz
 noremap $ $zz
 noremap ^ ^zz
 noremap j jzz
