@@ -29,9 +29,8 @@ set surround
 set multiple-cursors
 " copy to clipboard
 set clipboard+=unnamedplus
-" map ;; to Esc in insert mode and visual mode
-:imap ;; <Esc>
-:vmap ;; <Esc>
+
+imap jk <Esc>
 
 " set leader key
 let mapleader=","
@@ -96,3 +95,10 @@ nnoremap <A-j> :m .+1<CR>==
 nnoremap <A-k> :m .-2<CR>==
 inoremap <A-j> <Esc>:m .+1<CR>==gi
 inoremap <A-k> <Esc>:m .-2<CR>==gi
+
+" Press `f` to activate AceJump
+map f :action AceAction<CR>
+" Press `F` to activate Target Mode
+map F :action AceTargetAction<CR>
+" Press `g` to activate Line Mode
+map g :action AceLineAction<CR>

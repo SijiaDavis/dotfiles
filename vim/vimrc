@@ -32,8 +32,8 @@ set hidden
 " yank from clipboard
 set clipboard+=unnamedplus
 
-" map ;; to Esc
-:imap ;; <Esc>
+" map jk to Esc
+:imap jk <Esc>
 :vmap ;; <Esc>
 
 " set leader key
