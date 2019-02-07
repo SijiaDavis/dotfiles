@@ -35,8 +35,8 @@ imap jk <Esc>
 " set leader key
 let mapleader=","
 
-" reformat code
-nmap <leader>l :action ReformatCode<cr>
+" toggle line numbers 
+nmap <leader>l :set relativenumber!<cr>
 " go to declaration
 nmap <leader>g :action GotoDeclaration<cr>
 " run all test in the class
@@ -101,4 +101,4 @@ map f :action AceAction<CR>
 " Press `F` to activate Target Mode
 map F :action AceTargetAction<CR>
 " Press `g` to activate Line Mode
-map g :action AceLineAction<CR>
+" map g :action AceLineAction<CR>
