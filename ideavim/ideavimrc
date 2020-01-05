@@ -11,6 +11,7 @@ filetype indent on " Enable filetype-specific indenting
 filetype plugin on " Enable filetype-specific plugins
 " Set line numbering, shift width
 set number relativenumber
+yes
 
 set showmode
 set tabstop=2
