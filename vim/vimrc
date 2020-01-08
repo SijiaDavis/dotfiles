@@ -8,6 +8,7 @@ set ignorecase " case insensitive
 set hlsearch " highlight search result
 set bg=dark
 set showcmd
+hiya
 
 " Make vim indent 2 spaces for ruby files only
 filetype plugin indent on
